@@ -1,0 +1,34 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Portada{% endblock %}
+
+{% block header %}
+<header class="masthead" style="background-image: url({% static 'core/img/home-bg.jpg' %})">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>{{ person }}</h1>
+          <span class="subheading">{{ person.academic_title }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+
+      <p>Bienvenido a una página web personal.</p>
+      <p>Soy un {{ person.occupation }} y en este sitio web podrás encontrar información sobre mí,
+          y podras conocer mis proyectos y mis medios de contacto.</p>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

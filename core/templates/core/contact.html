@@ -1,0 +1,36 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Contacto{% endblock %}
+
+{% block header %}
+<header class="masthead" style="background-image: url({% static 'core/img/contact-bg.jpg' %})">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Contacto</h1>
+              <span class="subheading">Asesoría</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>Para mas información comunicarse a los medio sde contacto que se encuentran debajo.
+          (nota: se recomienda no perder su tiempo intentando comunicarse por estos medio ya que muy dificilmente se les respondera).</p>
+          <br>
+          <p><b>Teléfono:</b> {{ person.phone }}</p>
+          <p><b>Email:</b> {{ person.email }}</p>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+{% endblock %}

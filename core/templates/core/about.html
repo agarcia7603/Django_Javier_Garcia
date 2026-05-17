@@ -1,0 +1,40 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Acerca de{% endblock %}
+
+{% block header %}
+<header class="masthead" style="background-image: url({% static 'core/img/about-bg.jpg' %})">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Acerca de</h1>
+              <span class="subheading">Biografía</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+          <img class="img-fluid avatar" src="{{ person.image.url }}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+          <h2 class="section-heading">{{ person }}</h2>
+          <p><b>{{ person.academic_title }}</b></p>
+          <p>{{ person.biography }}</p>
+          <p><b>Dedicatoria:</b> {{ person.dedication }}</p>
+          <p><b>Ubicación:</b> {{ person.address }}</p>
+            <p><b>Ocupación:</b> {{ person.occupation }}</p>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+{% endblock %}
